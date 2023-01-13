@@ -1,14 +1,17 @@
-.containerPokemon {
-  background-color: #400000;
-  display: flex;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;800&family=Signika+Negative&display=swap");
 
+.containerPokemon {
+  display: flex;
   flex-direction: column;
   color: aliceblue;
   height: calc(100vh - 60px);
 }
 
-.containerPokemon h1 {
-  padding: 10px;
+.loading_pokebola {
+  display: flex;
+  margin-top: 10%;
+  justify-content: center;
+  align-items: center;
 }
 
 .pokemon {
@@ -18,7 +21,6 @@
   background-color: aliceblue;
   color: #191919;
   text-align: center;
-  height: 100vh;
 }
 
 .imagePokemon {
@@ -28,6 +30,7 @@
   align-items: center;
   background-image: url("../../assets/campo.jpg");
   background-size: cover;
+  height: calc(100vh - 60px);
 }
 
 .imagePokemon img {
@@ -35,13 +38,280 @@
   justify-content: center;
   max-width: 400px;
   max-height: 400px;
-  padding: 20px 0px;
+  padding: 20px 20px;
 }
 
 .descriptionPokemon {
+  display: flex;
   flex: 2;
-  height: 100%;
-  background-color: yellow;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+}
+
+.descriptionPokemonTitle {
+  margin: 30px 30px;
+  display: flex;
+  align-items: center;
+}
+
+.descriptionPokemonTitle a {
+  text-decoration: none;
+  background-color: #400080;
+  color: #fff;
+  width: 100px;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+
+.descriptionPokemonTitle a:hover {
+  transform: scale(1.1);
+}
+
+.descriptionPokemonTitle h1 {
+  margin: 0 30px;
+  text-transform: uppercase;
+  font-family: "Signika Negative", sans-serif;
+}
+
+.descriptionPokemonColumns {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 0 1rem;
+  margin-bottom: 30px;
+}
+
+.descriptionPokemonLeft {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  background-color: #fff;
+}
+.descriptionPokemonLeftInfo {
+  display: flex;
+  justify-content: left;
+  padding: 10px;
+  font-size: 2rem;
+  margin-left: 1rem;
+  font-family: "Signika Negative", sans-serif;
+}
+
+.descriptionPokemonLeftInfo strong {
+  margin-right: 10px;
+}
+
+.descriptionPokemonLeftAbilities {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 1rem;
+  justify-content: left;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 2rem;
+}
+
+.descriptionPokemonLeftAbilities div {
+  background-color: #400080;
+  color: #fff;
+  font-size: 1rem;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.descriptionPokemonLeftTypes {
+  display: flex;
+  margin-left: 1rem;
+  justify-content: left;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 2rem;
+}
+
+.descriptionPokemonLeftTypes div {
+  background-color: #400080;
+  color: #fff;
+  font-size: 1rem;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.descriptionPokemonRight {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.progress {
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+.progressTitle {
+  font-family: "Signika Negative", sans-serif;
+  text-align: left;
+  margin: 5px;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 360px) {
+  .descriptionPokemonTitle {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .containerPokemon {
+    display: flex;
+    margin-top: auto;
+    flex-direction: column;
+    color: aliceblue;
+    background-color: aliceblue;
+  }
+
+  .loading_pokebola {
+    display: flex;
+    margin-top: 10%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pokemon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: aliceblue;
+    color: #191919;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
+  .imagePokemon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../assets/campo.jpg");
+
+    background-size: cover;
+  }
+
+  .imagePokemon img {
+    justify-content: center;
+    max-width: 250px;
+    max-height: 250px;
+  }
+
+  .descriptionPokemonTitle {
+    padding: 0;
+  }
+  .descriptionPokemonTitle a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: #400080;
+    color: #fff;
+    width: 80px;
+    height: 50px;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+  }
+
+  .descriptionPokemonTitle a:hover {
+    transform: scale(1.1);
+  }
+
+  .descriptionPokemonTitle h1 {
+    margin: 0 15px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-family: "Signika Negative", sans-serif;
+  }
+
+  .descriptionPokemonColumns {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .descriptionPokemonLeft {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    background-color: #fff;
+  }
+  .descriptionPokemonLeftInfo {
+    display: flex;
+    justify-content: left;
+    font-size: 1.5rem;
+
+    font-family: "Signika Negative", sans-serif;
+  }
+
+  .descriptionPokemonLeftInfo strong {
+    margin-right: 10px;
+  }
+
+  .descriptionPokemonLeftAbilities {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+
+  .descriptionPokemonLeftAbilities div {
+    background-color: #400080;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 10px;
+  }
+
+  .descriptionPokemonLeftTypes {
+    display: flex;
+    margin-left: 1rem;
+    align-items: center;
+    padding: 0 10px;
+    font-size: 1.5rem;
+  }
+
+  .descriptionPokemonLeftTypes div {
+    background-color: #400080;
+    color: #fff;
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 10px;
+  }
+
+  .descriptionPokemonRight {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+    background-color: #fff;
+  }
+
+  .progress {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .progressTitle {
+    font-family: "Signika Negative", sans-serif;
+    text-align: left;
+    margin: 5px;
+    text-transform: capitalize;
+  }
 }

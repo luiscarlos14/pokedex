@@ -1,18 +1,125 @@
 .containerCard {
   display: flex;
   flex-direction: column;
-   background-color: #199;
   background-image: url("../../assets/back1.jpg");
-  background-repeat: unset; 
-
+  background-repeat: unset;
+  transition: all 0.5s ease;
   margin: 10px;
   max-width: 250px;
   width: 200px;
   height: 300px;
   border-top-left-radius: 25px;
+  cursor: pointer;
 }
 
+.containerCard:hover {
+  transform: scale(1.05);
+  transition: all 0.5s;
+}
 
+.water {
+  background-color: rgba(59, 153, 175, 1);
+}
+.water:hover:not(h3, a) {
+  box-shadow: 10px 5px 1px rgba(59, 153, 175, 1);
+}
+.grass {
+  background-color: rgba(50, 205, 50, 1);
+}
+.grass:hover:not(h3, a) {
+  box-shadow: 10px 5px 1px rgba(50, 205, 50, 1);
+}
+.fire {
+  background-color: rgba(255, 165, 0, 1);
+}
+.fire:hover:not(h3, a) {
+  box-shadow: 10px 5px 1px rgba(255, 165, 0, 1);
+}
+.bug {
+  background-color: rgba(154, 205, 50, 1);
+}
+.bug:hover:not(h3, a) {
+  box-shadow: 10px 5px 1px rgba(154, 205, 50, 1);
+}
+.normal {
+  background-color: rgba(210, 180, 140, 1);
+}
+.normal:hover:not(h3, a) {
+  box-shadow: 10px 5px 1px rgba(210, 180, 140, 1);
+}
+.poison {
+  background-color: rgba(139, 0, 139, 1);
+}
+.poison:hover:not(h3) {
+  box-shadow: 10px 5px 1px rgba(139, 0, 139, 1);
+}
+.fairy {
+  background-color: rgba(255, 0, 255, 1);
+}
+.fairy:hover:not(h3, a) {
+  box-shadow: 10px 5px 1px rgba(255, 0, 255, 1);
+}
+.ground {
+  background-color: rgba(240, 230, 140, 1);
+}
+.ground:hover:not(h3, a) {
+  box-shadow: 10px 5px 1px rgba(240, 230, 140, 1);
+}
+.fighting {
+  background-color: rgba(240, 0, 0, 1);
+}
+.fighting:hover:not(h3, a) {
+  box-shadow: 10px 5px 1px rgba(240, 0, 0, 1);
+}
+.psychic {
+  background-color: rgba(255, 20, 147, 1);
+}
+.psychic:hover:not(h3, a) {
+  box-shadow: 10px 5px 1px rgba(255, 20, 147, 1);
+}
+.rock {
+  background-color: rgba(188, 143, 147, 1);
+}
+.rock:hover:not(h3, a) {
+  box-shadow: 10px 5px 1px rgba(188, 143, 147, 1);
+}
+.electric {
+  background-color: rgba(255, 255, 0, 1);
+}
+.electric:hover:not(h3, a) {
+  box-shadow: 10px 5px 1px rgba(255, 255, 0, 1);
+}
+.ice {
+  background-color: rgba(0, 255, 255, 1);
+}
+.ice:hover:not(h3, a) {
+  box-shadow: 10px 5px 1px rgba(0, 255, 255, 1);
+}
+.dragon {
+  background-color: rgba(75, 0, 130, 1);
+}
+.dragon:hover:not(h3, a) {
+  box-shadow: 10px 5px 1px rgba(75, 0, 130, 1);
+}
+.dark {
+  background-color: rgba(139, 69, 19, 1);
+}
+.dark:hover:not(h3, a) {
+  box-shadow: 10px 5px 1px rgba(139, 69, 19, 1);
+}
+.steel {
+  background-color: rgba(192, 192, 192, 1);
+}
+.steel:hover:not(h3) {
+  box-shadow: 10px 5px 1px rgba(192, 192, 192, 1);
+}
+.ghost {
+  background-color: rgba(79, 79, 79, 1);
+}
+
+.ghost:hover:not(h3) {
+  box-shadow: 10px 5px 1px rgba(79, 79, 79, 1);
+}
 
 .imagem {
   display: flex;
@@ -21,6 +128,14 @@
   background-color: #f0f0f0;
   margin: 20px 10px;
   height: 50%;
+  flex-direction: column;
+}
+
+.imagem h3 {
+  font-size: 0.9rem;
+  position: relative;
+  padding: 3px;
+  border-radius: 10px;
 }
 
 .imagem img {
@@ -40,17 +155,20 @@
   text-align: center;
   margin-bottom: 15px;
 }
+
 .info a {
   text-decoration: none;
   font-size: 25px;
   padding: 10px 0;
   text-align: center;
-  background-color: #f0f0f0;
   cursor: pointer;
   margin: 10px;
   border-radius: 7px;
   color: #191919;
+  transition: all 0.5s ease;
 }
 
-
-
+.info a:hover {
+  transition: all 0.5s;
+  transform: scale(1.03);
+}

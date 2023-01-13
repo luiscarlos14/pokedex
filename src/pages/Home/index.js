@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./home.css";
 import api from "../../services/api";
+import pokebola from "../../assets/pokebola.gif"
 
 import Card from "../../components/cards";
 import axios from "axios";
@@ -40,8 +41,8 @@ export default function Home() {
 
   if (loading) {
     return (
-      <div className="filme-info">
-        <h1>Carregando Pokemons...</h1>
+      <div className="loading_pokebola">
+        <img src={pokebola} alt="" />
       </div>
     );
   }
@@ -57,6 +58,7 @@ export default function Home() {
               name={item.name}
               experience={item.base_experience}
               imagem={item.sprites.front_default}
+              type= {item.types[0].type.name}
             />
           </>
         ))}
