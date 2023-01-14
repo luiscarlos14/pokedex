@@ -11,7 +11,6 @@ function Header() {
           Pokedex
           <img className="pikachu" src={Pikachu} alt="Logo pokedex" />
         </Link>
-        
       </div>
       <div>
         <Link className="favoritos" to="/favoritos">

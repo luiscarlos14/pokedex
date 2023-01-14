@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;800&family=Signika+Negative&display=swap");
-
 .containerPokemon {
   display: flex;
   flex-direction: column;
@@ -9,7 +7,8 @@
 
 .loading_pokebola {
   display: flex;
-  margin-top: 10%;
+  width: 100%;
+  height: calc(100vh - 60px);
   justify-content: center;
   align-items: center;
 }
@@ -49,12 +48,21 @@
 }
 
 .descriptionPokemonTitle {
+  display: flex;
+  flex-direction: column;
   margin: 30px 30px;
   display: flex;
   align-items: center;
 }
+.descriptionPokemonTitleHeader{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+}
 
-.descriptionPokemonTitle a {
+.descriptionPokemonTitleHeader a {
   text-decoration: none;
   background-color: #400080;
   color: #fff;
@@ -70,7 +78,12 @@
 .descriptionPokemonTitle h1 {
   margin: 0 30px;
   text-transform: uppercase;
-  font-family: "Signika Negative", sans-serif;
+}
+
+.buttonFavorite{
+  background-color: transparent;
+  border: none;
+  margin: 0 10px;
 }
 
 .descriptionPokemonColumns {

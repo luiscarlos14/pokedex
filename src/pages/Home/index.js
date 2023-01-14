@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import "./home.css";
 import api from "../../services/api";
-import pokebola from "../../assets/pokebola.gif"
-
+import pokebola from "../../assets/pokebola.gif";
 import Card from "../../components/cards";
 import axios from "axios";
+
 
 export default function Home() {
   const [pokedex, setPokedex] = useState([]);
@@ -12,7 +12,7 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-   async function buscarPokemons() {
+    async function buscarPokemons() {
       chamarPokemons();
       setLoading(false);
     }
@@ -20,7 +20,6 @@ export default function Home() {
   }, []);
 
   async function chamarPokemons() {
-    
     await api
       .get(`/pokemon?limit=20&offset=${lastPokemon}`)
       .then((response) => {
@@ -33,16 +32,17 @@ export default function Home() {
         );
 
         setLastPokemon(pokedex.length - 1);
-       
-    
-       
       });
   }
+
+
+
+
 
   if (loading) {
     return (
       <div className="loading_pokebola">
-        <img src={pokebola} alt="" />
+        <img src={pokebola} alt="loading pokemon" />
       </div>
     );
   }
@@ -58,7 +58,7 @@ export default function Home() {
               name={item.name}
               experience={item.base_experience}
               imagem={item.sprites.front_default}
-              type= {item.types[0].type.name}
+              type={item.types[0].type.name}
             />
           </>
         ))}

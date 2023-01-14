@@ -1,0 +1,17 @@
+.ContainerError {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px);
+}
+
+.ContainerError img {
+  max-height: 350px;
+  max-width: 350px;
+  margin-bottom: 15px;
+}
+
+.ContainerError h1 {
+  font-size: 3rem;
+}
