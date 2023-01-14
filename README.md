@@ -10,3 +10,7 @@ Projeto de consumo da API [PokeAPI](https://pokeapi.co/).
 * Utilização do localStorage
 * Renderização condicional
 * Loading
+
+## Disponível 
+
+### https://pokedexluiscarlosbarrosdev.netlify.app/
